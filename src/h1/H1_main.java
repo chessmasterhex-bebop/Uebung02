@@ -1,26 +1,17 @@
 package h1;
 
-import java.util.Scanner;
-
 public class H1_main {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
 
-        System.out.print("Bitte eine Zahl eingeben (beliebig, auch negativ oder mit Nachkommastellen): ");
+        // Deklaration wie gefordert: int z mit beliebigem Startwert
+        int z = 18; // Beispielwert, darf man frei ändern
 
-        if (s.hasNextDouble()) {  // prüft, ob wirklich eine Zahl eingegeben wurde
-            double z = s.nextDouble();
-
-            if (z > 10) {
-                z = z - 10;
-            }
-
-            System.out.println("Ergebnis: " + z);
-        } else {
-            System.out.println("Fehler: Bitte eine gültige Zahl eingeben!");
+        // Wenn z echt größer als 10 ist, z um 10 verringern
+        if (z > 10) {
+            z = z - 10;
         }
 
-        s.close();
+        // Ausgabe zur Kontrolle
+        System.out.println(z);
     }
 }
-
